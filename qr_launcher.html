@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QR – Spenden-Demo</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<style>body{font-family:system-ui,sans-serif;text-align:center;padding:24px}#qrcode{margin:20px auto}</style></head>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR – SpendenDemo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body{font-family:system-ui, sans-serif;text-align:center;padding:24px}
+    #qrcode{margin:20px auto}
+    a{word-break:break-all}
+  </style>
+</head>
 <body>
-<h1>QR für Juvandia Spenden-Demo</h1>
-<div id="qrcode"></div><p id="link"></p>
-<script>
-  var url = "https://mxritzr.github.io/SpendenDemo/juvandia_spenden_demo_corrected.html";
-  new QRCode(document.getElementById("qrcode"), { text: url, width: 256, height: 256 });
-  document.getElementById('link').innerHTML = '<a href="'+url+'">'+url+'</a>';
-</script>
-</body></html>
+  <h1>QR für SpendenDemo</h1>
+  <div id="qrcode"></div>
+  <p id="link"></p>
+
+  <script>
+    // 👉 Hier die ZIEL-SEITE eintragen (nicht die QR-Seite selbst!)
+    var url = "https://mxritzr.github.io/SpendenDemo/juvandia_spenden_demo_corrected.html";
+    
+    new QRCode(document.getElementById("qrcode"), { text:url, width:256, height:256 });
+    document.getElementById("link").innerHTML = '<a href="'+url+'">'+url+'</a>';
+  </script>
+</body>
+</html>
 
