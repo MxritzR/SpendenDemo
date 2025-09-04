@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR – Juvandia Spenden-Demo (Platzhalter)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; text-align:center; background:#f1f5f9; }
+    #qrcode { margin:20px auto; }
+  </style>
+</head>
+<body>
+  <h1>QR für Juvandia Spenden-Demo</h1>
+  <p>Dieser QR-Code zeigt auf die Demo-Seite.</p>
+  <div id="qrcode"></div>
+  <p id="link"></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    // 👉 HIER deine IP eintragen, z.B. 192.168.178.23
+    var ip = "192.168.178.128";
+
+    var url = "http://" + ip + ":8000/juvandia_spenden_demo_corrected.html";
+    document.getElementById('qrcode').innerHTML = "";
+    new QRCode(document.getElementById("qrcode"), { text: url, width: 256, height: 256 });
+    document.getElementById('link').innerHTML = '<a href="'+url+'">'+url+'</a>';
+  </script>
+</body>
+</html>
